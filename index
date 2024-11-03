@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy birthday!!!</title>
+</head>
+<body>
+    <h1>HAPPY BIRTHDAY!!!</h1>
+    <h3>"The older you get, the better you get. Unless you’re a banana."</h3>
+    <a href="https://en.wikipedia.org/wiki/Banana">
+        <!--This is a banana-->
+        <img src="/images/banana.jpeg" height="200" alt="This is a picture of a banana" title="banana is yellow">
+    </a>
+    <h4>a banana</h4>
+    <video controls autoplay loop src="eating banana.mp4" width="300"></video>
+    <h4>a human</h4>
+    <br>
+    <audio controls autoplay loop src="happy birthday.mp3"></audio>
+
+    <h1>Not sure?
+        Let's Find out!!</h1>
+    <form>
+        <label for="yellow">
+            <input type="checkbox" id="yellow"> Are you completely yellow?
+        </label>
+        <br>
+        <label for="siblings">
+            <input type="checkbox" id="siblings"> Did you grow up with more than three siblings?
+        </label>
+        <br>
+        <label for="perennial">
+            <input type="checkbox" id="perennial"> Are you a perennial plant?
+        </label>
+        <br>
+        <label for="musaceae">
+            <input type="checkbox" id="musaceae"> Do you belong to the Musaceae family?
+        </label>
+        <br>
+        <label for="tree">
+            <input type="checkbox" id="tree"> Have you ever grown on a tree (or are you currently growing on one)?
+        </label>
+        <br>
+        <label for="sameClothes">
+            <input type="checkbox" id="sameClothes"> Do you wear the same outfit every day?
+        </label>
+        <br>
+        <button type="button" onclick="checkAnswers()">Submit</button>
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;
+            if (document.getElementById('yellow').checked) {
+                score++;
+            }
+            if (document.getElementById('siblings').checked) {
+                score++;
+            }
+            if (document.getElementById('perennial').checked) {
+                score++;
+            }
+            if (document.getElementById('musaceae').checked) {
+                score++;
+            }
+            if (document.getElementById('tree').checked) {
+                score++;
+            }
+            if (document.getElementById('sameClothes').checked) {
+                score++;
+            }
+
+            if (score >= 5) {
+                document.getElementById('result').innerHTML = "You are a banana.";
+            } else if (score >= 3) {
+                document.getElementById('result').innerHTML = "You are partially a banana.";
+            } else {
+                document.getElementById('result').innerHTML = "You are 100% human.";
+            }
+        }
+    </script>
+</body>
+</html>
